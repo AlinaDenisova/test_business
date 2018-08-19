@@ -1,0 +1,154 @@
+.news {
+  position: relative;
+  padding: 42px 28px 50px 22px;
+  background-color: #eff2f9;
+}
+
+@media (min-width: $desktop-width) {
+  .news {
+    padding: 47px 28px 50px 22px;
+  }
+}
+
+.news__container {
+  min-height: 140px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: $desktop-width) {
+  .news__container {
+    min-height: 250px;
+    margin-bottom: 0;
+  }
+}
+
+.news__tabs {
+  padding: 0 20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+@media (min-width: $desktop-width) {
+  .news__tabs {
+    margin-bottom: 45px;
+  }
+}
+
+.news__tab {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: top;
+  color: #bfbfbf;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+
+  &:first-child {
+    margin-right: 10px;
+  }
+
+  &:hover,
+  &--active {
+    color: $blue;
+    border-bottom: 4px solid $yellow;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .news__tab {
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    color: #c0c0c0;
+
+    &:hover,
+    &--active {
+      color: $bright-blue;
+      border-bottom-color: #fff200;
+    }
+  }
+}
+
+.news__content {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .news__content {
+    @include desktop-width;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.news__item:not(.news__item--active) {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .news__item:not(.news__item--active) {
+    display: block;
+  }
+}
+
+.news__dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  display: block;
+  transform: translateX(-50%);
+  padding: 0;
+}
+
+@media (min-width: $desktop-width) {
+  .news__dots {
+    display: none;
+  }
+}
+
+.news__dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-color: $gray;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--active {
+    background-color: $blue;
+  }
+}
+
+.news__more {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .news__more {
+    display: block;
+    width: 335px;
+    margin: 0 auto;
+  }
+}
+
+.news__btn {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .news__btn {
+    display: block;
+    width: 335px;
+    margin: 0 auto;
+  }
+}

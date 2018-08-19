@@ -1,0 +1,113 @@
+.user-list {
+  @include list-reset;
+  display: flex;
+}
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    padding-top: 5px;
+    flex-wrap: wrap;
+  }
+}
+
+.user-list__item {
+  display: inline-flex;
+}
+
+.user-list__link {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  margin-right: 8px;
+  border: 2px solid rgba(233, 233, 233, 0.2);
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $yellow;
+    border-color: $yellow;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 6px;
+
+    width: 22px;
+    height: 22px;
+
+    background-image: url("../../img/user-sprite.png");
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    content: attr(data-hint);
+    position: absolute;
+    right: 0;
+    bottom: -45px;
+    z-index: 1;
+    display: block;
+    width: 110px;
+    margin: 0;
+    padding: 9px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fcfdff;
+    text-align: center;
+    background-color: $black;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--search {
+    margin-right: 0;
+  }
+
+  &--login::after {
+    background-position: -5px -122px;
+  }
+
+  &--login:hover::after {
+    background-position: -5px -98px;
+  }
+
+  &--call::after {
+    background-position: -5px -26px;
+  }
+
+  &--call:hover::after {
+    background-position: -5px -0;
+  }
+
+  &--search::after {
+    background-position: -5px -75px;
+  }
+
+  &--search:hover::after {
+    background-position: -5px -52px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list__link {
+    border: 2px solid #eaeaea;
+
+    &--login::after {
+      background-position: -5px -98px;
+    }
+
+    &--call::after {
+      background-position: -5px -0;
+    }
+
+    &--search::after {
+      background-position: -5px -52px;
+    }
+  }
+}

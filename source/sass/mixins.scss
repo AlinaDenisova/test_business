@@ -1,36 +1,6 @@
-@mixin page-title {
-  font-size: 27px;
-  line-height: 30px;
-  font-weight: 700;
-  color: $black;
-}
-
-@mixin section-title {
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: 700;
-  color: $black;
-}
-
-@mixin font-text {
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
-  color: $black;
-}
-
-@mixin container {
-  box-sizing: border-box;
-  padding: 0 30px;
-  width: 100%;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 50px;
-  }
-}
-
 @mixin desktop-width {
-  max-width: 1150px;
+  max-width: 1072px;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -38,4 +8,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

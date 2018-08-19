@@ -1,0 +1,341 @@
+.features {
+  position: relative;
+  background-color: $gray;
+}
+
+@media (min-width: $desktop-width) {
+  .features__container {
+    @include desktop-width;
+    position: relative;
+    padding-top: 162px;
+  }
+}
+
+.features__nav {
+  background-color: $light-gray;
+}
+
+@media (min-width: $desktop-width) {
+  .features__nav {
+    position: absolute;
+    top: -115px;
+    right: 0;
+    left: 0;
+  }
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding-top: 45px;
+  padding-right: 16%;
+  padding-left: 16%;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #182a6f;
+}
+
+@media (min-width: $desktop-width) {
+  .features__title {
+    margin-bottom: 35px;
+    padding-top: 55px;
+    padding-right: 14%;
+    padding-left: 13%;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 38px;
+    color: #002672;
+  }
+}
+
+.features__list {
+  @include list-reset;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0;
+  text-align: center;
+}
+
+@media (min-width: $desktop-width) {
+  .features__list {
+    justify-content: space-around;
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+}
+
+.features__item {
+  position: relative;
+  width: 80px;
+  vertical-align: top;
+
+  &--active .features__link {
+    color: $blue;
+  }
+
+  &--active .features__link::after {
+    background-color: $yellow;
+  }
+
+  &--retail .features__link::after {
+    background-position: -5px -227px;
+  }
+
+  &--wifi .features__link::after {
+    background-position: -2px -403px;
+  }
+
+  &--callcenter .features__link::after {
+    background-position: 1px 2px;
+  }
+
+  &--logistics .features__link::after {
+    background-position: -4px -116px;
+  }
+
+  &--retail .features__link:hover::after,
+  &--retail.features__item--active .features__link::after {
+    background-position: -5px -286px;
+  }
+
+  &--wifi .features__link:hover::after,
+  &--wifi.features__item--active .features__link::after {
+    background-position: -2px -346px;
+  }
+
+  &--callcenter .features__link:hover::after,
+  &--callcenter.features__item--active .features__link::after {
+    background-position: 1px -58px;
+  }
+
+  &--logistics .features__link:hover::after,
+  &--logistics.features__item--active .features__link::after {
+    background-position: -4px -170px;
+  }
+
+  &--active::after {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 42%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid #f0f2f9;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    width: auto;
+
+    &--active::after {
+      bottom: -20px;
+      border-width: 20px;
+      left: 54%;
+    }
+
+    &:not(&--active) .features__link-title {
+      border-bottom: 1px dotted #c9c9c9;
+    }
+  }
+}
+
+.features__link {
+  position: relative;
+  display: block;
+  padding-top: 72px;
+  padding-bottom: 20px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #6e6e6e;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 62px;
+    height: 62px;
+    background-color: $blue;
+    background-image: url("../img/features-sprite.png");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:hover::after {
+    background-color: $yellow;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__link {
+    width: auto;
+    padding: 5px 0 50px 75px;
+    font-size: 18px;
+    line-height: 50px;
+
+    &::after {
+      top: 0;
+      left: 0;
+      transform: initial;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__link-title br {
+    display: none;
+  }
+}
+
+.features__content {
+  background-color: $gray;
+
+  &:not(&--active) {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 790px;
+    margin-left: 6.3%;
+    padding: 53px 0 75px 0;
+  }
+}
+
+.features__img-container {
+  height: 162px;
+  overflow: hidden;
+  background-color: $gray;
+}
+
+@media (min-width: $desktop-width) {
+  .features__img-container {
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    border: 13px solid $white;
+    border-radius: 50%;
+  }
+}
+
+.features__img-container img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.features__details {
+  position: relative;
+  padding: 20px 8.7% 35px 7.5%;
+}
+
+@media (min-width: $desktop-width) {
+  .features__details {
+    width: 460px;
+    padding: 24px 0 0 0;
+  }
+}
+
+.features__highlight-wrapper {
+  position: absolute;
+  top: -120px;
+  left: 0;
+  margin: 0;
+  padding-right: 35%;
+  padding-left: 8%;
+}
+
+@media (min-width: $desktop-width) {
+  .features__highlight-wrapper {
+    position: static;
+    margin-bottom: 15px;
+    padding: 0;
+    padding-left: 10px;
+  }
+}
+
+.features__highlight {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #162451;
+  display: inline;
+  box-shadow: 10px 0 0 #f3e818, -10px 0 0 #f3e818;
+}
+
+@media (min-width: $desktop-width) {
+  .features__highlight {
+    color: #123885;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+}
+
+.features__highlight-link {
+  background-color: #f3e818;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.features__descr {
+  margin: 0;
+  margin-bottom: 23px;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #353535;
+}
+
+@media (min-width: $desktop-width) {
+  .features__descr {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 10px;
+  }
+}
+
+.features__btn {
+  color: #123885;
+  padding: 10px 25px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 268px;
+}
+
+@media (min-width: $desktop-width) {
+  .features__btn {
+    width: auto;
+    margin-right: 45px;
+    padding: 16px 32px 18px 32px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

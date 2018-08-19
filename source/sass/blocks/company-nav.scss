@@ -1,0 +1,41 @@
+.company-nav {
+  @include list-reset;
+  margin-bottom: 60px;
+  flex-grow: 1;
+}
+
+@media (min-width: $desktop-width) {
+  .company-nav {
+    display: none;
+  }
+}
+
+.company-nav__item {
+  position: relative;
+  display: inline-flex;
+  padding: 0 14px 0 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: rgba(140, 171, 232, 0.8);
+
+  &:hover {
+    color: rgba(251, 242, 57, 0.8);
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    bottom: 7px;
+    width: 1px;
+    background-color: #3f5e9b;
+    box-sizing: border-box;
+  }
+}
+
+.company-nav__link {
+  color: inherit;
+  text-decoration: none;
+}

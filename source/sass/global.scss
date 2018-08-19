@@ -1,6 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
 body {
   min-width: 320px;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 400;
   background-color: $white;
   color: $black;
@@ -31,4 +42,39 @@ input[type="radio"].visually-hidden {
 
 label.visually-hidden:active {
   display: none;
+}
+
+.btn {
+  display: flex;
+  margin: 0;
+  padding: 20px 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  align-items: top;
+  justify-content: center;
+  text-align: center;
+  color: #263b82;
+  text-decoration: none;
+  background: transparent;
+  border: 3px solid #123885;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: #f0f2f9;
+
+    background-color: #263b82;
+    border-color: #263b82;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .btn {
+    padding: 16px 32px 18px 32px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }

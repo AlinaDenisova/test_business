@@ -1,0 +1,10 @@
+.page-header {
+  position: relative;
+  background-color: #fcfdff;
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding-bottom: 43px;
+  }
+}
