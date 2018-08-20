@@ -30,7 +30,7 @@
       top: 71px;
       width: 100%;
       max-width: 952px;
-      padding-left: 25px;
+      padding: 30px 25px 25px 25px;
     }
   }
 }
@@ -96,10 +96,8 @@
       position: absolute;
       top: 10px;
       left: -5px;
-
       width: 31px;
       height: 1px;
-
       background-color: $black;
       border: none;
     }
@@ -120,7 +118,7 @@
 }
 
 .modal__title {
-  margin: 0 15px 32px 40px;
+  margin: 0 0 32px 40px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
@@ -130,7 +128,6 @@
 @media (min-width: $desktop-width) {
   .modal__title {
     margin: 0;
-    margin-right: 20px;
     font-weight: 700;
     font-size: 26px;
     line-height: 30px;
@@ -147,6 +144,7 @@
   .modal__nav {
     width: auto;
     padding: 0;
+    margin-left: 20px;
   }
 }
 
@@ -189,10 +187,9 @@
 }
 
 @media (min-width: $desktop-width) {
-  .modal__nav-link {
+  .modal__nav-item {
     width: auto;
     padding: 0 16px 0 16px;
-
     font-size: 14px;
     line-height: 14px;
 
@@ -202,6 +199,16 @@
 
     &:last-child {
       padding-right: 19px;
+    }
+
+    &--login {
+      &:first-child {
+        padding-left: 35px;
+      }
+
+      &:last-child {
+        padding-right: 35px;
+      }
     }
   }
 }
@@ -219,6 +226,7 @@
   align-items: center;
   justify-content: center;
   color: #1c1c1c;
+  margin-left: 15px;
 
   border: 2px solid #fff200;
   border-radius: 50%;
@@ -275,191 +283,10 @@
 
 @media (min-width: $desktop-width) {
   .modal__more-info {
-    margin: 5px 20px 0 0;
+    margin: 5px 0 0 10px;
 
     &::before {
       right: -10px;
     }
   }
 }
-
-
-// .modal {
-//   display: none;
-//   background-color: $white;
-//   position: absolute;
-//   top: 63.5%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   min-width: 320px;
-//   width: 100%;
-//   box-sizing: border-box;
-//   z-index: 10;
-
-//   &--show {
-//     display: block;
-//     animation: bounce 0.6s;
-//   }
-// }
-
-// .modal__container {
-//   padding: 28px 25px;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   overflow: scroll;
-// }
-
-// @media (min-width: $desktop-width) {
-//   .modal__container {
-//     padding: 35px 0;
-//     padding-left: 25px;
-//     padding-right: 30px;
-//   }
-// }
-
-// .modal__title-wrapper {
-//   display: flex;
-// }
-
-// .modal__title {
-//   position: relative;
-//   margin: 0;
-//   font-size: 16px;
-//   font-weight: 500;
-//   line-height: 16px;
-//   color: $bright-blue;
-//   margin-bottom: 30px;
-//   padding-left: 40px;
-// }
-
-// @media (min-width: $desktop-width) {
-//   .modal__title {
-//     margin: 0;
-//     font-size: 26px;
-//     font-weight: 700;
-//     line-height: 26px;
-//     margin-right: 4.5%;
-//     padding-left: 5px;
-//   }
-// }
-
-// .modal__more-info {
-//   position: relative;
-//   box-sizing: border-box;
-//   width: 22px;
-//   height: 22px;
-//   background-color: white;
-//   border: 2px solid $yellow;
-//   border-radius: 50%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   font-size: 14px;
-//   font-weight: 500;
-//   line-height: 14px;
-//   margin-top: -5px;
-//   margin-left: 15px;
-// }
-
-// @media (min-width: $desktop-width) {
-//   .modal__more-info {
-//     &:hover .modal__more-info-descr,
-//     &:focus .modal__more-info-descr,
-//     &:active .modal__more-info-descr {
-//       display: block;
-//       position: absolute;
-//       width: 228px;
-//       height: auto;
-//       clip: auto;
-//       z-index: 2;
-//       top: 40px;
-//       right: -10px;
-//     }
-//   }
-// }
-
-// .modal__more-info-descr {
-//   display: none;
-// }
-
-// @media (min-width: $desktop-width) {
-//   .modal__more-info-descr {
-//     font-size: 12px;
-//     font-weight: 400;
-//     line-height: 12px;
-//     color: #fcfdff;
-//     padding: 10px;
-//     background-color: $black;
-//     text-align: center;
-
-//     &::before {
-//       content: '';
-//       position: absolute;
-//       top: -5px;
-//       right: 10px;
-//       width: 0;
-//       height: 0;
-//       border-style: solid;
-//       border-width: 0 8.5px 5px 8.5px;
-//       border-color: transparent transparent $black transparent;
-//     }
-//   }
-// }
-
-// .modal__close {
-//   position: absolute;
-//   width: 27px;
-//   height: 22px;
-//   top: 22px;
-//   left: 12px;
-//   border: 0;
-//   padding: 0;
-//   background-color: transparent;
-//   cursor: pointer;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     width: 27px;
-//     height: 22px;
-//     background-image: url("../img/sprite.png");
-//     background-position: -451px -10px;
-//   }
-// }
-
-// @media (min-width: $desktop-width) {
-//   .modal__close {
-//     width: 27px;
-//     height: 27px;
-//     top: 15px;
-//     right: 16px;
-//     left: auto;
-
-//     &::before,
-//     &::after {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     width: 1px;
-//     height: 27px;
-//     background-color: #141414;
-//   }
-
-//     &::before {
-//       transform: rotate(45deg);
-//     }
-
-//     &::after {
-//       transform: rotate(-45deg);
-//     }
-//   }
-// }
-
-// @media (min-width: $desktop-width) {
-//   .modal__wrapper {
-//     display: flex;
-//     margin-bottom: 28px;
-//   }
-// }

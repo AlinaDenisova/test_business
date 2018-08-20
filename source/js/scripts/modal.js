@@ -1,18 +1,11 @@
 'use strict';
-/**
- * Модуль управляет модальными окнами профиля и обратной связи
- * @module module:modal
- * @requires module:overlay
- * @requires module:navigation
- */
-(function () {
 
+//управление модальными окнами
+(function () {
   var btnProfile = document.querySelector('.user-list__link--login');
   var btnFeedback = document.querySelector('.user-list__link--call');
-
   var modalProfile = document.querySelector('.modal--login');
   var modalFeedback = document.querySelector('.modal--feedback');
-
   var activeModal = null;
 
   var profileTabs = new Tabs({
@@ -36,7 +29,6 @@
   profileTabs.addListener();
   feedbackTabs.addListener();
 
-
   var showModal = function (modal) {
     if (window.navigation.isOpened()) {
       window.navigation.hide();
@@ -56,7 +48,6 @@
     activeModal = null;
   };
 
-
   var showProfile = function (evt) {
     evt.preventDefault();
     showModal(modalProfile);
@@ -72,7 +63,6 @@
       closeModal();
     }
   };
-
 
   btnProfile.addEventListener('click', showProfile);
   btnFeedback.addEventListener('click', showFeedback);

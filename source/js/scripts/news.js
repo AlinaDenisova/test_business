@@ -1,10 +1,6 @@
 'use strict';
 
-/**
- * Модуль управляет разделом новостей сайта
- * @module module:news
- * @requires module:overlay
- */
+//управление разделом новостей
 (function () {
 
   var wrapperClass = 'news';
@@ -42,18 +38,13 @@
     'http://localhost:3000/backend/publications.json'
   ];
 
-  /**
-   * Функция возвращает индекс из массива TAB_VALUES, соответствующий значению активного таба
-   * @return {Number}
-   */
+  // возращает индекс из массива TAB_VALUES, соответствующий значению активного таба
   var getReferenceIndex = function () {
     var activeTabText = tabs[activeTabIndex].textContent;
     return TAB_VALUES.indexOf(activeTabText);
   };
 
-  /**
-   * Функция обновляет значение переменной newsItems
-   */
+  //обновление значение переменной newsItems
   var updateNewsItems = function () {
     newsItems = tabContents[activeTabIndex].querySelectorAll('.news__item');
     activeNewsIndex = [].indexOf.call(newsItems, tabContents[activeTabIndex].querySelector('.news__item--active'));
@@ -62,35 +53,25 @@
     }
   };
 
-  /**
-   * Функция удаляет статьи новостей, точки навигации слайдера
-   */
+  //Функция удаление статьи новостей, точки навигации слайдера
   var clearNewsItems = function () {
     tabContents[activeTabIndex].innerHTML = '';
     clearDots();
     updateNewsItems();
   };
 
-  /**
-   * Функция обновляет значение переменной dots
-   */
+  //обновляет значение переменной dots
   var updateDots = function () {
     dots = dotsContainer.querySelectorAll('.news__dot');
   };
 
-  /**
-   * Функция удаляет точки навигации слайдера
-   */
+  //удаляет точки навигации слайдера
   var clearDots = function () {
     dotsContainer.innerHTML = '';
     updateDots();
   };
 
-
-  /**
-   * Функция отрисовывает точки навигации слайдера на странице и выделяет активную
-   * @param {Number} n - количество точек для отрисовки
-   */
+  //отрисовывка точки навигации слайдера на странице и выделяет активную
   var renderDots = function (n) {
     var dot = null;
 
@@ -103,17 +84,12 @@
     activateNewsItem(activeNewsIndex);
   };
 
-  /**
-   * Функция переименовывает кнопку для загрузки новостей
-   */
+  //переименовывает кнопку для загрузки новостей
   var renameButton = function () {
     btnMoreNews.textContent = BTN_VALUES[getReferenceIndex()];
   };
 
-  /**
-   * Функция показывает выбранную новость в слайдере
-   * @param {number} n - номер выбранной новости
-   */
+  //показывает выбранную новость в слайдере
   var activateNewsItem = function (n) {
     newsItems[activeNewsIndex].classList.remove('news__item--active');
     dots[activeNewsIndex].classList.remove('news__dot--active');
@@ -121,7 +97,6 @@
     newsItems[activeNewsIndex].classList.add('news__item--active');
     dots[activeNewsIndex].classList.add('news__dot--active');
   };
-
 
   var sendRequest = function () {
     if (!xhrInProgress) {
@@ -131,19 +106,7 @@
     }
   };
 
-  /**
-   * @typedef {Object} ItemData - Информация о статье
-   * @property {string} title - Заголовок статьи
-   * @property {string} link - Ссылка статьи
-   * @property {string} text - Текст статьи
-   * @property {string} date - Дата публикации статьи
-   */
-
-  /**
-   * Функция возвращает отрисованную статью
-   * @param {ItemData} itemData - объект, содержащий информацию о статье
-   * @return {HTMLElement}
-   */
+  //возвращает отрисованную статью
   var renderNewsItem = function (itemData) {
     var element = document.createElement('article');
     var title = document.createElement('h3');
@@ -169,10 +132,8 @@
 
     return element;
   };
-  /**
-   * Функция отрисовывает статьи и точки навигации слайдера на странице
-   * @param {Array.<ItemData>} items - массив со статьями
-   */
+
+  //отрисовка статьи и точки навигации слайдера
   var renderItems = function (items) {
     var COUNT = 3;
 

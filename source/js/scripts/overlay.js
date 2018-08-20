@@ -1,8 +1,6 @@
 'use strict';
-/**
- * Модуль управляет слоем наложения
- * @module module:overlay
- */
+
+//наложение оверлея
 window.overlay = (function () {
   var overlay = document.querySelector('.overlay');
 

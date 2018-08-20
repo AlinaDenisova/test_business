@@ -18,6 +18,7 @@
   position: relative;
   width: 34px;
   height: 34px;
+  display: block;
   margin-right: 8px;
   border: 2px solid rgba(233, 233, 233, 0.2);
   border-radius: 50%;
@@ -36,7 +37,7 @@
     width: 22px;
     height: 22px;
 
-    background-image: url("../../img/user-sprite.png");
+    background-image: url("../img/user-sprite.png");
     background-repeat: no-repeat;
   }
 
@@ -47,7 +48,7 @@
     bottom: -45px;
     z-index: 1;
     display: block;
-    width: 110px;
+    width: 120px;
     margin: 0;
     padding: 9px;
     font-size: 12px;

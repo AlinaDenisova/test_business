@@ -21,5 +21,4 @@ window.evtKeyPress = (function () {
     isEnterPressed: isEnterPressed,
     isEscPressed: isEscPressed
   };
-
 })();

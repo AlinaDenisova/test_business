@@ -100,5 +100,4 @@ window.navigation = (function () {
     show: showNav,
     hide: hideNav
   };
-
 })();

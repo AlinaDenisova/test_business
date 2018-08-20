@@ -12,5 +12,4 @@
   });
 
   featuresTabs.addListener();
-
 })();

@@ -5,7 +5,7 @@
     <link rel="preload" href="fonts/robotolight.woff2" as="font" crossorigin>
     <link rel="preload" href="fonts/robotobold.woff2" as="font" crossorigin>
     <link rel="preload" href="fonts/roboto.woff2" as="font" crossorigin>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <title>Тестовое задание</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
@@ -14,7 +14,7 @@
     <header class="page-header">
       <nav class="main-nav main-nav--closed">
         <div class="main-nav__logo">
-          <a class="page-header__logo-link">
+          <a class="main-nav__logo-link">
             <picture>
               <source media="(min-width: 780px)" srcset="img/logo-desktop.png">
               <img src="img/logo-mobile.png" width="162" height="39" alt="Логотип студии">
@@ -283,8 +283,8 @@
             <div class="features__details">
               <div class="features__highlight-wrapper">
                 <h3 class="features__highlight">
-                 <a class="features__highlight-link">Call-центры</a>
-               </h3>
+                  <a class="features__highlight-link">Call-центры</a>
+                </h3>
               </div>
               <p class="features__descr">Описание</p>
               <div class="features__btn-wrapper">
@@ -364,10 +364,10 @@
         </button>
 
         <ul class="modal__nav">
-          <li class="modal__nav-item modal__nav-item--active">
+          <li class="modal__nav-item modal__nav-item--active modal__nav-item--login">
             <a class="modal__nav-link">Регистрация</a>
           </li>
-          <li class="modal__nav-item">
+          <li class="modal__nav-item modal__nav-item--login">
             <a class="modal__nav-link">Авторизация</a>
           </li>
         </ul>
@@ -425,14 +425,14 @@
 
       <form class="modal-form" action="#" method="post">Форма для частных клиентов</form>
 
-      <form class="modal-form modal-form--active" method="post" action="https://echo.htmlacademy.ru">
+      <form class="modal-form modal-form--active modal-form--feedback" method="post" action="https://echo.htmlacademy.ru">
         <div class="modal-form__group">
           <label class="visually-hidden" for="name">Фамилия, имя, отчество:</label>
-          <input class="modal-form__field" id="entity-name" type="text" name="entity-name" placeholder="Фамилия, Имя, Отчество" required>
+          <input class="modal-form__field modal-form__field--first-column" id="entity-name" type="text" name="entity-name" placeholder="Фамилия, Имя, Отчество" required>
           <label class="visually-hidden" for="entity-tel">Номер телефона:</label>
-          <input class="modal-form__field" id="entity-tel" type="tel" name="entity-tel" placeholder="Номер телефона" required>
+          <input class="modal-form__field modal-form__field--second-column" id="entity-tel" type="tel" name="entity-tel" placeholder="Номер телефона" required>
           <label class="visually-hidden" for="entity-email">Электронная почта:</label>
-          <input class="modal-form__field" id="entity-email" type="email" name="entity-email" placeholder="Электронная почта" required>
+          <input class="modal-form__field modal-form__field--email" id="entity-email" type="email" name="entity-email" placeholder="Электронная почта" required>
         </div>
 
         <div class="modal-form__group">
@@ -442,7 +442,7 @@
             <input class="modal-form__field modal-form__field--yellow" id="city" type="text" name="city" value="Санкт-Петербург" required readonly>
           </div>
           <label class="visually-hidden" for="street">Улица:</label>
-          <input class="modal-form__field" id="street" type="text" name="street" placeholder="Улица" required>
+          <input class="modal-form__field modal-form__field--second-column" id="street" type="text" name="street" placeholder="Улица" required>
 
             <label class="visually-hidden" for="house">Дом:</label>
             <input class="modal-form__field modal-form__field--address" id="house" type="text" name="house" placeholder="Номер дома" required>
@@ -489,15 +489,6 @@
       <form class="modal-form" action="#" method="post">Форма для промо-офисов</form>
     </section>
 
-    <script src="js/tabs.js"></script>
-    <script src="js/evt-keypress.js"></script>
-    <script src="js/overlay.js"></script>
-    <script src="js/remove-no-js.js"></script>
-    <script src="js/main-nav.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/features.js"></script>
-    <script src="js/news.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/select.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
