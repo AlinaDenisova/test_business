@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preload" href="fonts/robotolight.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/robotobold.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/roboto.woff2" as="font" crossorigin>
+    <link href="css/style.min.css" rel="stylesheet">
+    <title>Тестовое задание</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+  <body class="no-js">
+
+    <header class="page-header">
+      <nav class="main-nav main-nav--closed">
+        <div class="main-nav__logo">
+          <a class="main-nav__logo-link">
+            <picture>
+              <source media="(min-width: 780px)" srcset="img/logo-desktop.png">
+              <img src="img/logo-mobile.png" width="162" height="39" alt="Логотип студии">
+            </picture>
+          </a>
+        </div>
+
+        <button class="main-nav__toggle" type="button">
+          <span class="main-nav__toggle-line"></span>
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+
+        <div class="main-nav__container">
+          <ul class="categories-list">
+            <li class="categories-list__item">
+              <a class="categories-list__link" href="#">
+                Для дома</a>
+            </li>
+            <li class="categories-list__item">
+              <a class="categories-list__link categories-list__link--active" href="#">Для бизнеса</a>
+            </li>
+          </ul>
+
+          <ul class="site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Продукты и услуги</a>
+              <ul class="site-list__item-list sub-nav">
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Интернет</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Телефония</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Каналы передачи данных</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Решения</a>
+              <ul class="site-list__item-list sub-nav">
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Интернет</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Телефония</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Каналы передачи данных</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Облачные сервисы</a>
+              <ul class="site-list__item-list sub-nav">
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Интернет</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Телефония</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Каналы передачи данных</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="site-list site-list--active">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Продукты и услуги</a>
+              <ul class="site-list__item-list sub-nav">
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Интернет</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Телефония</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Каналы передачи данных</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Решения</a>
+              <ul class="site-list__item-list sub-nav">
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Интернет</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Телефония</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Каналы передачи данных</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Облачные сервисы</a>
+              <ul class="site-list__item-list sub-nav">
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Интернет</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Телефония</a>
+                </li>
+                <li class="sub-nav__item">
+                  <a class="sub-nav__link" href="#">Каналы передачи данных</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="company-nav">
+            <li class="company-nav__item">
+              <a class="company-nav__link" href="#">О компании</a>
+            </li>
+            <li class="company-nav__item">
+              <a class="company-nav__link" href="#">Новости</a>
+            </li>
+            <li class="company-nav__item">
+              <a class="company-nav__link" href="#">Вакансии</a>
+            </li>
+            <li class="company-nav__item">
+              <a class="company-nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="user-list">
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--login" href="#" data-hint="Личный кабинет">
+                <span class="visually-hidden">Личный кабинет</span>
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--call" href="#" data-hint="Заказ обратного звонка">
+                <span class="visually-hidden">Заказ обратного звонка</span>
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--search" href="#" data-hint="Поиск по сайту">
+                <span class="visually-hidden">Поиск по сайту</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="contacts">
+            <span class="contacts__address">Санкт-Петербург</span>
+            <a class="contacts__phone" href="tel:+7(812)3664040"> +7 (812) 366 40 40</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="slider">
+        <h1 class="visually-hidden">Интернет-провайдер «Prosto telecom»</h1>
+
+        <ul class="slider__slides">
+          <li class="slider__slide slider__slide--1">
+            <h2 class="slider__slide-title">Микробизнес</h2>
+            <p class="slider__slide-descr">от идеи до воплощения 2 дня</p>
+          </li>
+          <li class="slider__slide slider__slide--2 slider__slide--active">
+            <h2 class="slider__slide-title">Малый бизнес</h2>
+            <p class="slider__slide-descr">от идеи до воплощения 3 дня</p>
+          </li>
+          <li class="slider__slide slider__slide--3">
+            <h2 class="slider__slide-title">Средний бизнес</h2>
+            <p class="slider__slide-descr">от идеи до воплощения 5 дней</p>
+          </li>
+          <li class="slider__slide slider__slide--4">
+            <h2 class="slider__slide-title">Крупный бизнес</h2>
+            <p class="slider__slide-descr">от идеи до воплощения 8 дней</p>
+          </li>
+        </ul>
+
+        <button class="slider__btn slider__btn--prev">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <button class="slider__btn slider__btn--next">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
+        <ul class="slider__dots"></ul>
+      </section>
+
+      <section class="features">
+        <div class="features__container">
+          <div class="features__nav">
+            <h2 class="features__title">Выгодные предложения<br> для различных направлений бизнеса:</h2>
+            <ul class="features__list">
+              <li class="features__item features__item--retail">
+                <a class="features__link" href="#">
+                  <span class="features__link-title">Ритейл</span>
+                </a>
+              </li>
+              <li class="features__item features__item--wifi features__item--active">
+                <a class="features__link" href="#">
+                  <span class="features__link-title">Организация Wi-FI зон</span>
+                </a>
+              </li>
+              <li class="features__item features__item--callcenter">
+                <a class="features__link" href="#">
+                  <span class="features__link-title">Call<br>-центры</span>
+                </a>
+              </li>
+              <li class="features__item features__item--logistics">
+                <a class="features__link" href="#">
+                  <span class="features__link-title">Логистика</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="features__content">
+            <div class="features__img-container">
+              <picture>
+                <source media="(min-width: 780px)" srcset="img/features-bg-desktop.jpg">
+                <img src="img/features-bg-mobile.jpg" alt="Фоновое изображение блока преимуществ" width="360" height="162">
+              </picture>
+            </div>
+            <div class="features__details">
+              <div class="features__highlight-wrapper">
+                <h3 class="features__highlight">
+                  <a class="features__highlight-link">Ритейл</a>
+                </h3>
+              </div>
+              <p class="features__descr">Описание</p>
+              <div class="features__btn-wrapper">
+                <a href="#" class="btn features__btn">Запросить коммерческое предложение</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="features__content features__content--active">
+            <div class="features__img-container">
+              <picture>
+                <source media="(min-width: 780px)" srcset="img/features-bg-desktop.jpg">
+                <img src="img/features-bg-mobile.jpg" alt="Фоновое изображение блока преимуществ" width="360" height="162">
+              </picture>
+            </div>
+            <div class="features__details">
+              <div class="features__highlight-wrapper">
+                <h3 class="features__highlight">
+                  <a class="features__highlight-link">Удобный<br> интернет-серфинг в&#160;общественных местах</a>
+                </h3>
+              </div>
+              <p class="features__descr">Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений</p>
+              <div class="features__btn-wrapper">
+                <a href="#" class="btn features__btn">Запросить коммерческое предложение</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="features__content">
+            <div class="features__img-container">
+              <picture>
+                <source media="(min-width: 780px)" srcset="img/features-bg-desktop.jpg">
+                <img src="img/features-bg-mobile.jpg" alt="Фоновое изображение блока преимуществ" width="360" height="162">
+              </picture>
+            </div>
+            <div class="features__details">
+              <div class="features__highlight-wrapper">
+                <h3 class="features__highlight">
+                  <a class="features__highlight-link">Call-центры</a>
+                </h3>
+              </div>
+              <p class="features__descr">Описание</p>
+              <div class="features__btn-wrapper">
+                <a href="#" class="btn features__btn">Запросить коммерческое предложение</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="features__content">
+            <div class="features__img-container">
+              <picture>
+                <source media="(min-width: 780px)" srcset="img/features-bg-desktop.jpg">
+                <img src="img/features-bg-mobile.jpg" alt="Фоновое изображение блока преимуществ" width="360" height="162">
+              </picture>
+            </div>
+            <div class="features__details">
+              <div class="features__highlight-wrapper">
+                <h3 class="features__highlight">
+                  <a class="features__highlight-link">Логистика</a>
+                </h3>
+              </div>
+              <p class="features__descr">Описание</p>
+              <a href="#" class="btn features__btn">Запросить коммерческое предложение</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="news__tabs">
+          <a class="news__tab news__tab--active" href="#">Новости</a>
+          <a class="news__tab" href="#">Публикации</a>
+        </div>
+
+        <div class="news__container">
+          <div class="news__content news__content--active">
+            <article class="article news__item">
+              <h3 class="article__title">
+                <a class="article__link" href="#">«ПРОСТО Телеком» приступает к оказанию услуг телефонии в Пензе</a>
+              </h3>
+              <p class="article__descr">Корпоративные клиенты в Пензе теперь могут приобрести городские телефонные номера у оператора связи "ПРОСТО Телеком"
+              </p>
+              <span class="article__time">7 ноября 2014</span>
+            </article>
+
+            <article class="article news__item news__item--active">
+              <h3 class="article__title">
+                <a class="article__link" href="#">Компания «ПРОСТО Телеком» отмечает свой день рождения</a>
+              </h3>
+              <p class="article__descr">17 лет назад в Петербурге была основана компания "ПРОСТО Телеком". За эти годы компания  из небольшого интернет-провайдера
+                превратилась в универсального оператора связи федерального масштаба.
+              </p>
+              <span class="article__time">14 ноября 2014</span>
+            </article>
+
+            <article class="article news__item">
+              <h3 class="article__title">
+                <a class="article__link" href="#">Осенью подключение пакета «Интернет + Телефон» бесплатно!</a>
+              </h3>
+              <p class="article__descr">С 15 сентября корпоративные клиенты в Пензе могут бесплатно подключить пакет "Интернет + Телефон"</p>
+              <span class="article__time">21 ноября 2014</span>
+            </article>
+          </div>
+          <div class="news__content"></div>
+        </div>
+        <ul class="news__dots"></ul>
+        <a href="#" class="btn news__btn">Еще новости</a>
+      </section>
+    </main>
+
+    <div class="overlay"></div>
+    <section class="modal modal--login">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Личный кабинет</h2>
+        <button class="modal__close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <ul class="modal__nav">
+          <li class="modal__nav-item modal__nav-item--active modal__nav-item--login">
+            <a class="modal__nav-link">Регистрация</a>
+          </li>
+          <li class="modal__nav-item modal__nav-item--login">
+            <a class="modal__nav-link">Авторизация</a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="modal-form modal-form--active" method="post" action="#">
+        <label class="visually-hidden" for="name">Имя:</label>
+        <input class="modal-form__field" id="name" type="text" name="name" placeholder="Имя" required>
+        <label class="visually-hidden" for="last-name">Фамилия:</label>
+        <input class="modal-form__field" id="last-name" type="text" name="last-name" placeholder="Фамилия" required>
+        <label class="visually-hidden" for="email">Электронная почта:</label>
+        <input class="modal-form__field" id="email" type="email" name="email" placeholder="Электронная почта" required>
+        <label class="visually-hidden" for="tel">Телефон:</label>
+        <input class="modal-form__field" id="tel" type="tel" name="tel" placeholder="Телефон" required>
+        <label class="visually-hidden" for="password">Пароль:</label>
+        <input class="modal-form__field" id="password" type="password" name="password" placeholder="Пароль" required>
+        <label class="visually-hidden" for="verify-password">Подтвердите пароль:</label>
+        <input class="modal-form__field" id="verify-password" type="password" name="verify-password" placeholder="Подтвердите пароль" required>
+        <div class="modal-form__btn-wrapper">
+          <button type="submit" class="btn modal-form__btn modal-form__btn--login">Зарегистрироваться</button>
+        </div>
+      </form>
+
+      <form class="modal-form" action="#" method="post">
+        <label class="visually-hidden" for="autho-email">Электронная почта:</label>
+        <input class="modal-form__field" id="autho-email" type="email" name="autho-email" placeholder="Электронная почта" required>
+        <label class="visually-hidden" for="autho-password">Пароль:</label>
+        <input class="modal-form__field" id="autho-password" type="password" name="autho-password" placeholder="Пароль" required>
+        <div class="modal-form__btn-wrapper">
+          <button type="submit" class="btn modal-form__btn modal-form__btn--login">Авторизоваться</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="modal modal--feedback">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Обратная связь</h2>
+        <span class="modal__more-info" data-hint="После обработки сообщения, с Вами свяжется наш менеджер" tabindex="0">?</span>
+        <button class="modal__close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <ul class="modal__nav">
+          <li class="modal__nav-item">
+            <a class="modal__nav-link">Частный клиент</a>
+          </li>
+          <li class="modal__nav-item modal__nav-item--active">
+            <a class="modal__nav-link">Юридическое лицо</a>
+          </li>
+          <li class="modal__nav-item">
+            <a class="modal__nav-link">Промо-офис</a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="modal-form" action="#" method="post">Форма для частных клиентов</form>
+
+      <form class="modal-form modal-form--active modal-form--feedback" method="post" action="https://echo.htmlacademy.ru">
+        <div class="modal-form__group">
+          <label class="visually-hidden" for="name">Фамилия, имя, отчество:</label>
+          <input class="modal-form__field modal-form__field--first-column" id="entity-name" type="text" name="entity-name" placeholder="Фамилия, Имя, Отчество" required>
+          <label class="visually-hidden" for="entity-tel">Номер телефона:</label>
+          <input class="modal-form__field modal-form__field--second-column" id="entity-tel" type="tel" name="entity-tel" placeholder="Номер телефона" required>
+          <label class="visually-hidden" for="entity-email">Электронная почта:</label>
+          <input class="modal-form__field modal-form__field--email" id="entity-email" type="email" name="entity-email" placeholder="Электронная почта" required>
+        </div>
+
+        <div class="modal-form__group">
+          <span class="modal-form__title">Адрес подключения услуги:</span>
+          <div class="modal-form__city-wrapper">
+            <label class="visually-hidden" for="city">Город:</label>
+            <input class="modal-form__field modal-form__field--yellow" id="city" type="text" name="city" value="Санкт-Петербург" required readonly>
+          </div>
+          <label class="visually-hidden" for="street">Улица:</label>
+          <input class="modal-form__field modal-form__field--second-column" id="street" type="text" name="street" placeholder="Улица" required>
+
+            <label class="visually-hidden" for="house">Дом:</label>
+            <input class="modal-form__field modal-form__field--address" id="house" type="text" name="house" placeholder="Номер дома" required>
+            <label class="visually-hidden" for="flat">Квартира:</label>
+            <input class="modal-form__field modal-form__field--address" id="flat" type="text" name="flat" placeholder="Квартира" required>
+
+        </div>
+
+        <div class="modal-form__group modal-form__group--message">
+          <span class="modal-form__title">Тип обращения:</span>
+          <div class="select select--type">
+            <span class="select__value">Выберите тип услуги</span>
+            <ul class="select__dropdown">
+              <li class="select__option" data-value="type1">Интернет</li>
+              <li class="select__option" data-value="type2">Телефония</li>
+              <li class="select__option" data-value="type3">Каналы передачи данных</li>
+            </ul>
+            <input type="hidden" name="type" id="type">
+          </div>
+        </div>
+
+        <div class="modal-form__group modal-form__group--message">
+          <span class="modal-form__title">Тема обращения:</span>
+            <div class="select select--subject">
+            <span class="select__value">Выберите тему</span>
+            <ul class="select__dropdown">
+              <li class="select__option" data-value="subject1">Тема 1</li>
+              <li class="select__option" data-value="subject2">Тема 2</li>
+              <li class="select__option" data-value="subject3">Тема 3</li>
+            </ul>
+            <input type="hidden" name="subject" id="subject">
+          </div>
+        </div>
+
+        <label class="visually-hidden" for="message">Текст сообщения:</label>
+        <textarea class="modal-form__field modal-form__field--textarea" id="message" name="message" placeholder="Текст сообщения" required></textarea>
+
+        <div class="modal-form__btn-wrapper">
+          <span class="modal-form__required">Все поля обязательны для заполнения</span>
+          <button type="submit" class="btn modal-form__btn modal-form__btn--feedback">Отправить</button>
+        </div>
+      </form>
+
+      <form class="modal-form" action="#" method="post">Форма для промо-офисов</form>
+    </section>
+
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
